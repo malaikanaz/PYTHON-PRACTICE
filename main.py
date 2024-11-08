@@ -107,4 +107,64 @@ if(age>=18):
 else:
     print("you cannot drive")
 #----------------------------------------------------------------------------------------------------
-#question no 14
+# question no 14
+# write a program to check if a number entered by the user is odd or even
+num=int(input("enter a number here: "))
+if(num%2==0):
+    print("number is even")
+else:
+    print("number is odd")
+# --------------------------------------------------------------------------
+# question no 15
+# write a program to find the greatest of three numbers entered by the user
+a=int(input("enter first number: "))
+b=int(input("enter second number: "))
+c=int(input("enter third number: "))
+if(a>=b and a>=c):
+    print("first number is greater")
+elif(b>=a and b>=c):
+    print("second number is greater")
+else:
+    print("third number is greater")
+# --------------------------------------------------------------------------
+# question no 16
+# write a program to check if a number is a multple of 7 or not
+num=int(input("enter a number: "))
+if(num%7==0):
+    print("number is a multiple of 7")
+else:
+    print("number is not a multiple f 7")
+# ----------------------------------------------------------------------------
+# question no 17
+# write a program to ask the user to enter names of their three favourite movies and store them in a list
+movie1=str(input("enter the name of your first favourite movie: "))
+movie2=str(input("enter the name of your second favourite movie: "))
+movie3=str(input("enter the name of your third favourite movie: "))
+list=[]
+list.append(movie1)
+list.append(movie2)
+list.append(movie3)
+print(list)
+# ------------------------------------------------------------------------------
+# question no 18
+# WAP to check if a list contains a palindrome of elements. [hint:use copy()method]
+list1=[1,2,1]
+copy_list=list1.copy()
+copy_list.reverse()
+if(copy_list==list1):
+    print("palindrome")
+else:
+    print("not a palindrome")
+# -------------------------------------------------------------------------------
+# question no 19
+# WAP to count the number of students with grade "A" in the following tuple
+grades=("C","A","A","B","D")
+print(grades.count("A"))
+# --------------------------------------------------------------------------
+# qestion no 20
+# stores the values in a list and sort them from "A" to "D"
+values=str('A','C','B','C','D')
+values.sort()
+print(values)
+# ---------------------------------------------------------------------------------
+
