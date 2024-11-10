@@ -167,4 +167,79 @@ values=str('A','C','B','C','D')
 values.sort()
 print(values)
 # ---------------------------------------------------------------------------------
+# question no 21
+# store following word meanings in dic(cat: a small animal, table: (a piece of furniture , list of facts and figures))
+dictionary= {
+     "cat": " a small animal",
+    "table ": ["a piece of furniture" , "list of facts and figures"]
+}
+print(dictionary)
+# ----------------------------------------------------------------------------------------------
+# question no 22
+# you are given a list of subjects for students.assume 1 classroom is required for 1 subject.how many classrooms are needed by all students.python,java,c++,python,typescript,java,python,java,c++,c.
+subjects={
+    "python","java","c++","python","typescript","java","python","java","c++","c"
+}
+print(len(subjects))
+print("five classroom are required for these students")
+# ----------------------------------------------------------------------------------------------
+# question no 23
+# write a program to enter marks of 3 subjects from the user and store them in a dictionary.start with an empty dictionary and store them one by one.use subject name as key and marks are value.
+marks={}
+marks1=int(input("enter the marks of phy: "))
+marks.update ({"phy":marks1})
+marks2=int(input("enter the marks of 2 chem: "))
+marks.update({"chem":marks2})
+marks3=int(input("enter the marks of 3 com: "))
+marks.update({"com":marks3})
+print(marks)
+# ----------------------------------------------------------------------------------------------
+# question no 24
+# figure out a way to store 9 and 9.0 as separate values in a set
+numbers ={
+    ("float" ,9.0),
+    ("int",9)
+}
+print(numbers)
+# ----------------------------------------------------------------------------------------------
+# question no 25
+# print numbers from 1 to 100
+i=1
+while i<=100:
+    print(i)
+    i+=1
+#-----------------------------------------------------------------------------------------------
+# question no 26
+# print numbers from 100 to 1
+i=100
+while i>=1:
+    print(i)
+    i-=1
+# ----------------------------------------------------------------------------------------------
+# question no 27
+# print multiplication table of a number n
+n=int(input("enter a number: "))
+i=1
+while i<=10:
+    print(n*i)
+    i+=1
+# -------------------------------------------------------------------------------------------------
+# question no 28
+#print the elements of a following list using a while loop [1,4,9,12,34,56,78,90,64,43,36]
+nums=[1,4,9,12,34,56,78,90,64,43,36]
+index = 0
+while index< len(nums):
+    print(nums[index])
+    index+=1
+#---------------------------------------------------------------------------------------------------
+# question no 29
+# search for a number x in this tuple using loop (1,4,9,12,34,56,78,90,64,43,36)
+nums=(1,4,9,12,34,56,78,90,64,43,36)
+x=int(input("enter a number from the tuple(1,4,9,12,34,56,78,90,64,43,36):  "))
+i=0
+while i<len(nums):
+    if (nums[i]==x):
+        print("found at index ",i)
+    i+=1
+#-----------------------------------------------------------------------------------------------------
 
