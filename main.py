@@ -242,4 +242,129 @@ while i<len(nums):
         print("found at index ",i)
     i+=1
 #-----------------------------------------------------------------------------------------------------
-
+# question no 30
+# print the elements of the following list using the  for loop [1,4,9,12,34,56,78,90,64,43,36]
+nums=[1,4,9,12,34,56,78,90,64,43,36]
+for el in nums:
+    print(el)
+# -----------------------------------------------------------------------------------------------------
+# question no 31
+# search for a number x in this tuple using for loop (1,4,9,12,34,56,78,90,64,43,36)
+nums=(1,4,9,12,34,56,78,90,64,43,36)
+x=int(input("enter a number from the tuple(1,4,9,12,34,56,78,90,64,43,36):  "))
+index=0
+for el in nums:
+    if(el==x):
+        print("found at index",index)
+    index+=1
+# ------------------------------------------------------------------------------------------------------
+# question no 32
+# print numbers from 1 to 100 using range and for
+for i in range(1,101):
+    print(i)
+# -----------------------------------------------------------------------------------------------------
+# question no 33
+# print numbers from 100 to 1 using range and for
+for i in range(100,0,-1):
+    print(i)
+# -----------------------------------------------------------------------------------------------------
+# question no 34
+# printthe multiplication table of a number n using for and range
+n=int(input("enter a number: "))
+for i in range(1,11):
+    print(n*i)
+#----------------------------------------------------------------------------------------------------
+# question no 35
+# WAP to find the sum of the first n natural numbers using while loop
+n=int(input("enter a natural number: "))
+sum=0
+i=1
+while i <=n:
+    sum+=i
+    i+=1
+print(sum)
+#------------------------------------------------------------------------------------------------------
+# question no 36
+# WAP to find the sum of the first n natural numbers using for loop
+n=int(input("enter a natural number: "))
+i=1
+sum=0
+for i in range(1,n+1):
+    sum+=i
+print(sum)
+#-------------------------------------------------------------------------------------------------------
+# question no 37
+# WAP to find the factorial of n numbers using for loop
+n=int(input("enter a natural number: "))
+i=1
+fact=1
+for i in range(1,n+1):
+    fact*=i
+print(fact)
+# ----------------------------------------------------------------------------------------------------------
+# question no 38
+# WAP to find the factorial of n numbers using while loop
+n=int(input("enter a natural number: "))
+i=1
+fact=1
+while i <=n:
+    fact*=i
+    i+=1
+print(fact)
+# --------------------------------------------------------------------------------------------------------
+# question no 39
+# calculating average of three numbers using function
+def calc_avg(a,b,c):
+    sum=a+b+c
+    avg=sum/3
+    print(avg)
+    return avg
+calc_avg(2,3,4)
+#-----------------------------------------------------------------------------------------------------------
+# question no 40
+# WAP to print the length of a list (using list as a parameter)
+cities=['islamabad','faisalabad','lahore']
+foods=['icecream','chocolate']
+def print_len(list):
+    print(len(list))
+print_len(cities)
+print_len(foods)
+# ----------------------------------------------------------------------------------------------------------------
+# question no 41
+# WAP to print the elements of a list in a single line (list is the parameter)
+cities=['islamabad','faisalabad','lahore']
+foods=['icecream','chocolate']
+def print_el(list):
+    for items in list:
+        print(items,end=" ")
+print_el(cities)
+print_el(foods)
+# ---------------------------------------------------------------------------------------------------------------
+# question no 42
+# WAP to find the factorial of n. (n is the parameter)
+n=int(input("enter a number: "))
+def fac(n):
+    fact=1
+    for i in range(1,n+1):
+        fact *= i 
+    print(fact)
+fac(n)     
+# ---------------------------------------------------------------------------------------------------------------
+# question no 43
+# WAP to convert US dollar into PKR
+usd_val=int(input("enter usd value: "))
+def converter(usd_val):
+    pkr_val = usd_val*300
+    print(usd_val,"USD=",pkr_val,"PKR")
+converter(usd_val)
+# ---------------------------------------------------------------------------------------------------------------
+# question no 44
+# a function takes a number as input and print odd if the number is odd and even if the number is even
+n=int(input("enter a number: "))
+def val_ue(n):
+    if (n%2 !=0):
+        print("ODD")
+    else: 
+        print("EVEN")
+val_ue(n)
+# -----------------------------------------------------------------------------------------------------------------
