@@ -396,3 +396,176 @@ def print_list(list,idx=0):
 cities=['islamabad','lahore','faisalabad']
 print_list(cities)
 # ------------------------------------------------------------------------------------------------------------------
+# question no 48
+# create a new file practice.txt using the Python. Add the following data in it:
+#       hi everyone. we are learning file I/O using python. i like programming in python.
+with open("practice.txt","w") as f:
+    f.write("hi everyone.\nwe are learning file I/O\n")
+    f.write("using java.\nI like programming in java.")
+# --------------------------------------------------------------------------------------------------------------------
+# question no 49
+# WAF that replaces all the occurrences of java with python in above file
+with open("practice.txt","r") as f:
+    data = f.read()
+    updated_data = data.replace("java","python")
+    print(updated_data)
+    with open("practice.txt","w") as f:
+        f.write(updated_data)
+# --------------------------------------------------------------------------------------------------------------------
+# question no 50
+# search if the word learning exist in the file or not.
+def find_word():
+    with open("practice.txt","r") as f:
+        data =f.read()
+    if (data.find("learning")==-1):
+        print("The word 'learning' is not found in the file.")
+    else:
+        print("The word 'learning' is found in the file.")
+find_word()
+# ----------------------------------------------------------------------------------------------------------------------
+# question no 51
+# WAF to find in which line of the file does the word learning occurs first.print -1 if the word is not found.
+
+def find_line():
+    word ="learning"
+    data = True
+    line_num = 1
+    with open("practice.txt", "r") as f:
+        while data:
+            data = f.readline()
+            if word in data:
+                print(line_num)
+                return
+            line_num += 1
+    return -1
+print(find_line())
+# ----------------------------------------------------------------------------------------------------------------------
+# question no 52
+# from a file containing numbers separated by comma, print the count of even numbers
+count=0
+with open ("p.txt", "r") as f:
+    data = f.read()
+    print(data)
+    nums= data.split(",")
+    for val in nums:
+        if (int(val)%2==0):
+            count+=1 
+print(count)
+# ----------------------------------------------------------------------------------------------------------------------
+# question no 53
+# create a student class that takes names and marks of 3 subjects as arguments in constructor.then create a method to print the average
+class Student:
+    def __init__(self,name,marks1,marks2,marks3):
+        self.name=name
+        self.marks1=marks1
+        self.marks2=marks2
+        self.marks3=marks3
+    def calculate_avg(self):
+        avg=(self.marks1+self.marks2+self.marks3)/3
+        print("your average score is",avg)
+
+student1=Student("John",85,92,88)
+student1.calculate_avg()
+# ----------------------------------------------------------------------------------------------------------------------
+# question no 54
+# create account class with 2 attributes- balance and account no.create methods for debit, credit and printing the balance.
+class Account:
+    def __init__(self,bal,acc_no):
+        self.balance=bal
+        self.account_no=acc_no
+    def debit(self,amount):
+        self.balance -= amount
+        print("Amount debited successfully")
+    def credit(self,amount):
+        self.balance += amount
+        print("Amount credited successfully")
+    def print_balance(self):
+        print("Your current balance is",self.balance)
+acc1=Account(12000,1234)
+acc1.debit(5200)
+acc1.credit(200)
+
+acc1.print_balance()
+# ----------------------------------------------------------------------------------------------------------------------
+# question no 55
+# define a circle class to create a circle with a radius r using constructor.define an area method() of the class which calculates the area of the circle. define a perimeter() method of the class which  allows you tocalculates the perimeter of the circle
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius
+    def area(self):
+        return (22/7)* self.radius ** 2
+    def perimeter(self):
+        return 2* (22/7) * self.radius
+c1=Circle(21)
+print(c1.radius)
+print("Area of circle is: ",c1.area())
+print("Perimeter of circle is: ",c1.perimeter())
+# -----------------------------------------------------------------------------------------------------------------------
+# question no 56
+# define a employ class with attributes role, department and salary.this class also has a show details() method. create an engineer class that inherits the properties from employee class and has aditional attributes name and age.
+class Employee:
+    def __init__(self,role, department, salary):
+        self.role = role
+        self.department = department
+        self.salary = salary
+    def show_details(self):
+        print("Role: ", self.role)
+        print("Department: ", self.department)
+        print("Salary: ", self.salary)
+e1=Employee("accountant", "finance", "60,000")
+e1.show_details()
+class Engineer(Employee):
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
+        super(). __init__("engineer","IT","75,000")
+eng1= Engineer("numan",40)
+eng1.show_details()
+# -----------------------------------------------------------------------------------------------------------------------
+# question no 57
+# create a class called store which stores the item and its price.use dunder function __gt__ to convey that: order1>order2 if the price of order1 > order2
+
+class Store:
+    def __init__(self, item, price):
+        self.item = item
+        self.price = price
+
+    def __gt__(self, other):
+        return self.price > other.price 
+or1=Store("chips",40)
+or2=Store("icecream",30) 
+print(or1 > or2)
+# ------------------------------------------------------------------------------------------------------------------------
+# question no 58
+# A MINI PROJECT
+# guess the number.
+import random
+random_num= random.randint(1,100)
+while True:
+    userchoice=(input("enter a number or quit: "))
+    if (userchoice == "quit"):
+        print("you choose to quit the game")
+        break
+    userchoice=int(userchoice)
+    if (userchoice==random_num):
+        print("success!")
+        break
+    elif (userchoice<random_num):
+        print("your guess is too small. Take a bigger guess...")
+    else:
+        print("your guess is too big. Take a smaller guess...")
+    
+print("-----Game Over-----")
+# --------------------------------------------------------------------------------------------------------------------------
+# question no 59
+# A MNINI PROJECT
+# randon password generator
+import random
+import string
+pass_len = 12
+char_val= string.ascii_letters + string.digits + string.punctuation
+password= ""
+for i in range(pass_len):
+    password += random.choice(char_val)
+print("your random password is: ",password)
+# --------------------------------------------------------------------------------------------------------------------------
